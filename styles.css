@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe4e1; /* Fondo rosado suave */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+#carta {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #ffb6c1; /* Borde rosado */
+    border-radius: 10px;
+    background-color: #fff0f5; /* Fondo más claro dentro de la carta */
+    max-width: 600px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: entrada 1.5s ease-out forwards;
+}
+
+#carta img {
+    display: block;
+    margin: 10px auto;
+    border: 2px solid #f08a5d;
+    border-radius: 10px;
+}
+
+#mensaje {
+    width: 80%;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #f08a5d;
+    border-radius: 5px;
+}
+
+.mensaje {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.imagen-gato {
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 2px solid #f08a5d;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #f08a5d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #b83b5e;
+}
+
+#mensaje-especial {
+    color: #b83b5e;
+    font-size: 20px;
+}
+
+/* Corazones animados */
+.corazones {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.corazones::before,
+.corazones::after {
+    content: "❤️";
+    position: absolute;
+    font-size: 24px;
+    animation: flotar 5s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+.corazones::before {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.corazones::after {
+    left: 70%;
+    animation-delay: 2s;
+}
+
+/* Animaciones de gatos flotando */
+.animales {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.animales::before,
+.animales::after {
+    content: "🐱";
+    position: absolute;
+    font-size: 40px;
+    animation: flotar 6s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+.animales::before {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.animales::after {
+    left: 80%;
+    animation-delay: 3s;
+}
+
+@gatos-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.gato {
+    position: absolute;
+    font-size: 40px;
+    opacity: 0;
+}
+
+@gatos-negros-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.gato-negro {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0;
+}
+
+#mensaje-sorpresa {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0;
+    }
+}
+
+h1 {
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+    animation: brillar 2s infinite alternate;
+}
+
+@keyframes brillar {
+    from {
+        text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+    }
+    to {
+        text-shadow: 0 0 20px #ff1493, 0 0 30px #ff1493, 0 0 40px #ff1493;
+    }
+}
+
+@keyframes entrada {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

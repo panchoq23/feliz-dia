@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Mi Novia</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #carta {
+            border: 5px dashed #ffb6c1;
+            background-image: url('fondo-corazones.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <h1 class="text-4xl font-bold text-pink-700">¡Feliz Día de la Madre!</h1>
+    <p class="text-lg text-gray-800 leading-relaxed">Esta es una carta especial para ti, mi amor.</p>
+
+    <!-- Sección de la carta -->
+    <section id="carta">
+        <div class="bg-white shadow-lg rounded-xl max-w-2xl w-full p-8 border border-pink-300">
+            <div class="text-center">
+                <img id="gatito" src="orion_lindo.jpg" alt="Orion, el gato especial" class="mx-auto w-40 h-40 object-cover rounded-full border-4 border-black cursor-pointer mb-4">
+                <h1 class="text-4xl font-bold text-pink-700">Carta para Ti</h1>
+            </div>
+            <div class="mt-6 text-lg text-gray-800 leading-relaxed">
+                <p>Querida sigrid cariño de mi alma ,</p>
+                <p class="mt-4">Hoy quiero recordarte lo especial que eres para mí. Eres una persona increíble, llena de amor y bondad. Gracias por todo lo que haces y por ser quien eres.</p>
+                <p class="mt-4">Espero que este día sea tan maravilloso como tú. ¡Te amo más de lo que las palabras pueden expresar! ❤️</p>
+                <p class="mt-6 text-right">Con todo mi amor,<br><span class="italic">tu papucho poto suave </span></p>
+            </div>
+            <div class="text-center mt-6">
+                <button onclick="mostrarSorpresa()" class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition">
+                    Haz clic para una sorpresa 🎁
+                </button>
+                <p id="mensaje-sorpresa" class="text-2xl text-pink-700 font-bold mt-4 hidden">
+                    ¡Eres la mejor persona del mundo! 🌸❤️
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Canción de YouTube -->
+    <div style="margin-top: 20px; text-align: center;">
+        <iframe width="300" height="169" 
+            src="https://www.youtube.com/embed/EUntKx-tfjo?autoplay=1&loop=1&playlist=EUntKx-tfjo" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div id="gatos-container">
+        <span class="gato">🐱</span>
+        <span class="gato">🐾</span>
+        <span class="gato">😺</span>
+    </div>
+
+    <div id="gatos-negros-container">
+        <span class="gato-negro">🐈</span>
+        <span class="gato-negro">🐈‍⬛</span>
+        <span class="gato-negro">🐈</span>
+    </div>
+
+    <div class="animales"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
